@@ -1,5 +1,4 @@
 plugins {
-    `maven-publish`
     id("net.kyori.blossom") version "1.3.0"
 }
 
@@ -20,15 +19,4 @@ dependencies {
 
 blossom {
     replaceToken("{version}", project.version, "src/main/java/me/xneox/epicguard/core/util/VersionUtils.java")
-}
-
-// Publish to jitpack.org
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            artifactId = "EpicGuard"
-
-            from(components["java"])
-        }
-    }
 }

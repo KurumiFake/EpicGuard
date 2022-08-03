@@ -9,4 +9,4 @@ dependencyResolutionManagement {
     }
 }
 
-include("core", "paper", "velocity", "waterfall")
+include("core", "velocity")

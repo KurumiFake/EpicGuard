@@ -49,11 +49,4 @@ subprojects {
         options.encoding = Charsets.UTF_8.name()
         options.release.set(16)
     }
-
-    // For Waterfall and Paper platforms: set version
-    tasks.withType<ProcessResources> {
-        filesMatching("plugin.yml") {
-            expand("version" to project.version)
-        }
-    }
 }
