@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class BlacklistCheck extends AbstractCheck {
   public BlacklistCheck(EpicGuard epicGuard) {
-    super(epicGuard, epicGuard.messages().disconnect().blacklisted(), 98); // will always be executed secondly.
+    super(epicGuard, epicGuard.messages().disconnect().blacklisted(), 99); // will always be executed first.
   }
 
   @Override
