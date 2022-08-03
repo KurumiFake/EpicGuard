@@ -21,12 +21,10 @@ import java.util.HashMap;
 import java.util.Map;
 import me.xneox.epicguard.core.EpicGuard;
 import me.xneox.epicguard.core.command.sub.AnalyzeCommand;
-import me.xneox.epicguard.core.command.sub.BlacklistCommand;
 import me.xneox.epicguard.core.command.sub.HelpCommand;
 import me.xneox.epicguard.core.command.sub.ReloadCommand;
 import me.xneox.epicguard.core.command.sub.SaveCommand;
 import me.xneox.epicguard.core.command.sub.StatusCommand;
-import me.xneox.epicguard.core.command.sub.WhitelistCommand;
 import me.xneox.epicguard.core.util.TextUtils;
 import me.xneox.epicguard.core.util.VersionUtils;
 import net.kyori.adventure.audience.Audience;
@@ -44,11 +42,9 @@ public class CommandHandler {
     this.epicGuard = epicGuard;
 
     this.commandMap.put("analyze", new AnalyzeCommand());
-    this.commandMap.put("blacklist", new BlacklistCommand());
     this.commandMap.put("help", new HelpCommand());
     this.commandMap.put("reload", new ReloadCommand());
     this.commandMap.put("status", new StatusCommand());
-    this.commandMap.put("whitelist", new WhitelistCommand());
     this.commandMap.put("save", new SaveCommand());
   }
 

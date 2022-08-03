@@ -61,14 +61,6 @@ public class MessagesConfiguration {
     private String prefix = " &cEpicGuard &8// &7";
     private String usage = "&cCorrect usage: &6{USAGE}";
     private String unknownCommand = "&cUnknown command, use &6/epicguard &cfor available commands.";
-    private String whitelistAdd = "&7The user &a{USER} &7has been added to the whitelist.";
-    private String whitelistRemove = "The user &6{USER} &7has been removed from the whitelist";
-    private String blacklistAdd = "&7The user &c{USER} &7has been added to the blacklist.";
-    private String blacklistRemove = "&7The user &6{USER} &7has been removed from the blacklist.";
-    private String alreadyWhitelisted = "&cThe user &6{USER} &cis already whitelisted!";
-    private String alreadyBlacklisted = "&cThe user &6{USER} &cis already blacklisted!";
-    private String notWhitelisted = "&cThe user &6{USER} &cis not in whitelist!";
-    private String notBlacklisted = "&cThe user &6{USER} &cis not in the blacklist!";
     private String reloaded = "&7Succesfully reloaded config and messages!";
     private String toggleStatus = "&7You have toggled your attack status!";
     private String invalidArgument = "&cCould not resolve address for this nickname, or provided address is invalid.";
@@ -87,8 +79,6 @@ public class MessagesConfiguration {
             " &8/&fguard reload &8- &7Reload config and messages.",
             " &8/&fguard save &8- &7Save data to the database.",
             " &8/&fguard analyze <nick/address> &8- &7Perform detailed analysis on specified user.",
-            " &8/&fguard whitelist <add/remove> <nick/address> &8- &7Whitelist/unwhitelist an address or nickname.",
-            " &8/&fguard blacklist <add/remove> <nick/address> &8- &7Blacklist/unblacklist an address or nickname.",
             "");
 
     private List<String> analyzeCommand =
@@ -118,38 +108,6 @@ public class MessagesConfiguration {
 
     public String unknownCommand() {
       return this.unknownCommand;
-    }
-
-    public String whitelistAdd() {
-      return this.whitelistAdd;
-    }
-
-    public String whitelistRemove() {
-      return this.whitelistRemove;
-    }
-
-    public String blacklistAdd() {
-      return this.blacklistAdd;
-    }
-
-    public String blacklistRemove() {
-      return this.blacklistRemove;
-    }
-
-    public String alreadyWhitelisted() {
-      return this.alreadyWhitelisted;
-    }
-
-    public String alreadyBlacklisted() {
-      return this.alreadyBlacklisted;
-    }
-
-    public String notWhitelisted() {
-      return this.notWhitelisted;
-    }
-
-    public String notBlacklisted() {
-      return this.notBlacklisted;
     }
 
     public String reloaded() {
