@@ -30,7 +30,6 @@ public class MessagesConfiguration {
   private String actionbarMonitor = "&cEpicGuard &8// &6%cps% &7connections/s &8| %status%";
   private String actionbarNoAttack = "&7No attack...";
   private String actionbarAttack = "&cAttack detected!";
-  private String updateAvailable = "A new update is available: {NEWVER} (You are still on {OLDVER})";
 
   public Command command() {
     return this.command;
@@ -50,10 +49,6 @@ public class MessagesConfiguration {
 
   public String actionbarAttack() {
     return this.actionbarAttack;
-  }
-
-  public String updateAvailable() {
-    return this.updateAvailable;
   }
 
   @ConfigSerializable

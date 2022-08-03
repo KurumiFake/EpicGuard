@@ -33,7 +33,6 @@ import me.xneox.epicguard.core.storage.StorageManager;
 import me.xneox.epicguard.core.task.AttackResetTask;
 import me.xneox.epicguard.core.task.DataSaveTask;
 import me.xneox.epicguard.core.task.MonitorTask;
-import me.xneox.epicguard.core.task.UpdateCheckerTask;
 import me.xneox.epicguard.core.util.ConfigurationLoader;
 import me.xneox.epicguard.core.util.FileUtils;
 import org.jetbrains.annotations.NotNull;
@@ -83,7 +82,6 @@ public class EpicGuard {
 
     logger().info("Scheduling tasks...");
     this.platform.scheduleRepeatingTask(new MonitorTask(this), 1L);
-    this.platform.scheduleRepeatingTask(new UpdateCheckerTask(this), 1800L);
     this.platform.scheduleRepeatingTask(new AttackResetTask(this), this.config.misc().attackResetInterval());
     this.platform.scheduleRepeatingTask(new DataSaveTask(this), TimeUnit.MINUTES.toSeconds(this.config.misc().autoSaveInterval()));
 

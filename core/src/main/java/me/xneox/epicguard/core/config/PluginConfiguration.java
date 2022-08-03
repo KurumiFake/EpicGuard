@@ -385,9 +385,6 @@ public class PluginConfiguration {
             (!) Requires restart to apply.""")
     private long attackResetInterval = 80L;
 
-    @Comment("Set to false to disable update checker.")
-    private boolean updateChecker = true;
-
     @Comment("Time in minutes before auto-saving data.\n" +
         "(!) Requires restart to apply.")
     private long autoSaveInterval = 10L;
@@ -401,10 +398,6 @@ public class PluginConfiguration {
 
     public long attackResetInterval() {
       return this.attackResetInterval;
-    }
-
-    public boolean updateChecker() {
-      return this.updateChecker;
     }
 
     public long autoSaveInterval() {
