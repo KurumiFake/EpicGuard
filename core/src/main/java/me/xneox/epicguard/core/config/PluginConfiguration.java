@@ -375,13 +375,6 @@ public class PluginConfiguration {
 
   @ConfigSerializable
   public static class Misc {
-    @Comment("""
-            Should every user (except if he is whitelisted)
-            be disconnected when there is an bot attack?
-            true - Better protection and HUGE performance boost
-            false - Allow NEW players connecting during attack.""")
-    private boolean lockdownOnAttack = true;
-
     @Comment("How many connections per second must be made,\n"
             + "to activate the attack mode temporally?")
     private int attackConnectionThreshold = 6;
@@ -401,10 +394,6 @@ public class PluginConfiguration {
 
     @Comment("Enabling this will log additional useful information, such as performed detections.")
     private boolean debug = false;
-
-    public boolean lockdownOnAttack() {
-      return this.lockdownOnAttack;
-    }
 
     public int attackConnectionThreshold() {
       return this.attackConnectionThreshold;

@@ -141,10 +141,6 @@ public class MessagesConfiguration {
         "&8» &7You have been kicked by &bAntiBot Protection&7:",
         "&8» &cYou have been blacklisted on this server.");
 
-    private List<String> attackLockdown = Arrays.asList(
-        "&8» &7You have been kicked by &bAntiBot Protection&7:",
-        "&8» &cServer is under attack, please wait some seconds before joining.");
-
     private List<String> proxy = Arrays.asList(
         "&8» &7You have been kicked by &bAntiBot Protection&7:",
         "&8» &cYou are using VPN or Proxy.");
@@ -179,10 +175,6 @@ public class MessagesConfiguration {
 
     public List<String> blacklisted() {
       return this.blacklisted;
-    }
-
-    public List<String> attackLockdown() {
-      return this.attackLockdown;
     }
 
     public List<String> proxy() {

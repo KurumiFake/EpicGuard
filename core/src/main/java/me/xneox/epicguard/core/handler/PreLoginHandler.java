@@ -23,7 +23,6 @@ import me.xneox.epicguard.core.check.AbstractCheck;
 import me.xneox.epicguard.core.check.AccountLimitCheck;
 import me.xneox.epicguard.core.check.BlacklistCheck;
 import me.xneox.epicguard.core.check.GeographicalCheck;
-import me.xneox.epicguard.core.check.LockdownCheck;
 import me.xneox.epicguard.core.check.NameSimilarityCheck;
 import me.xneox.epicguard.core.check.NicknameCheck;
 import me.xneox.epicguard.core.check.ProxyCheck;
@@ -45,7 +44,6 @@ public abstract class PreLoginHandler {
     this.epicGuard = epicGuard;
 
     // This will be automatically sorted based on the configured priority.
-    pipeline.add(new LockdownCheck(epicGuard));
     pipeline.add(new BlacklistCheck(epicGuard));
     pipeline.add(new NicknameCheck(epicGuard));
     pipeline.add(new GeographicalCheck(epicGuard));
