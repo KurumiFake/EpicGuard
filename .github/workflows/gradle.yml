@@ -19,11 +19,9 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin'
-      - uses: burrunan/gradle-cache-action@v1
-        name: Build with Gradle
-        with:
-          arguments: build
-          gradle-version: wrapper
+          cache: 'gradle'
+      - name: build
+        run: ./gradlew build
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:

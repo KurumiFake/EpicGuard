@@ -85,8 +85,8 @@ public class Database {
           + " VALUES(?, ?, ?, ?)")) {
 
         statement.setString(1, entry.getKey());
-        statement.setBoolean(3, meta.whitelisted());
-        statement.setString(4, String.join(",", meta.nicknames()));
+        statement.setBoolean(2, meta.whitelisted());
+        statement.setString(3, String.join(",", meta.nicknames()));
 
         statement.executeUpdate();
       }
