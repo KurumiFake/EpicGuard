@@ -77,6 +77,8 @@ public class EpicGuard {
     this.storageManager = new StorageManager(this);
     this.storageManager.setupDatabase();
 
+    //TODO - ipset / pf firewall
+
     logger().info("Initializing LogFilter...");
     new LogFilter(this).register();
 

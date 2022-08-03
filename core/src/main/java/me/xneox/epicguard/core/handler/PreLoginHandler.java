@@ -83,6 +83,7 @@ public abstract class PreLoginHandler {
       if (check.isDetected(user)) {
         LogUtils.debug(nickname + "/" + address + " detected by " + check.getClass().getSimpleName());
         return Optional.of(check.detectionMessage());
+        //TODO - ipset / pf firewall, probably check for anything not reconnect
       }
     }
 
