@@ -56,7 +56,7 @@ public class StorageManager {
    */
   @NotNull
   public AddressMeta addressMeta(@NotNull String address) {
-    return this.addresses.computeIfAbsent(address, s -> new AddressMeta(false, false, new ArrayList<>()));
+    return this.addresses.computeIfAbsent(address, s -> new AddressMeta(false, new ArrayList<>()));
   }
 
   /**
