@@ -27,36 +27,36 @@ import org.spongepowered.configurate.objectmapping.meta.Comment;
 @ConfigSerializable
 public class PluginConfiguration {
 
-  @Comment("GeographicalCheck will filter countries/cities your players can connect from.")
+  @Comment("Filter countries/cities your players can connect from.")
   private Geographical geographical = new Geographical();
 
   @Comment("Detect users who are connecting using proxies or VPNs.")
   private ProxyCheck proxyCheck = new ProxyCheck();
 
-  @Comment("This check will limit how many accounts can be registered from single IP address")
+  @Comment("Limit how many accounts can be registered from single IP address")
   private AccountLimitCheck accountLimitCheck = new AccountLimitCheck();
 
   @Comment("Every vanilla client sends the Settings packet shortly after joining.\n"
-      + "Some bots doesn't do this, and this check will try to detect that.")
+      + "Some bots doesn't do this, this check will try to detect that.")
   private SettingsCheck settingsCheck = new SettingsCheck();
 
-  @Comment("Nickname-check will block players if their nickname matches\n"
+  @Comment("Block players if their nickname matches\n"
       + "the regex expression set below.")
   private NicknameCheck nicknameCheck = new NicknameCheck();
 
-  @Comment("NameSimilarityCheck will detect similar nicknames of the connecting users\n"
+  @Comment("Detect similar nicknames of the connecting users\n"
       + "(!) Experimental! https://neox.gitbook.io/epicguard-wiki/configuring/name-similarity-check")
   private NameSimilarityCheck nameSimilarityCheck = new NameSimilarityCheck();
 
-  @Comment("ReconnectCheck will force new users to join the server again.")
+  @Comment("Force new users to join the server again.")
   private ReconnectCheck reconnectCheck = new ReconnectCheck();
 
-  @Comment("Server-list check will force users to add your server\n"
+  @Comment("Force users to add your server\n"
       + "to their server list (send a ping) before joining")
   private ServerListCheck serverListCheck = new ServerListCheck();
 
   @Comment("If a player is online for long enough (see option below)\n"
-      + "He will be added to the whitelist, and be exempt from every future detections")
+      + "They will be added to the whitelist and be exempt from future detections")
   private AutoWhitelist autoWhitelist = new AutoWhitelist();
 
   private ConsoleFilter consoleFilter = new ConsoleFilter();
@@ -361,7 +361,7 @@ public class PluginConfiguration {
     private boolean enabled = false;
 
     @Comment("Time in seconds the player must be online\n" +
-        "to be added to the EpicGuard's whitelist.")
+        "to be added to EpicGuard's whitelist.")
     private int timeOnline = 600;
 
     public boolean enabled() {
@@ -389,7 +389,7 @@ public class PluginConfiguration {
         "(!) Requires restart to apply.")
     private long autoSaveInterval = 10L;
 
-    @Comment("Enabling this will log additional useful information, such as performed detections.")
+    @Comment("Log additional informations such as performed detections.")
     private boolean debug = false;
 
     public int attackConnectionThreshold() {
