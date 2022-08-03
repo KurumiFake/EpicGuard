@@ -70,15 +70,6 @@ public class EpicGuardAPI {
   }
 
   /**
-   * @return An immutable Collection which contains blacklisted addresses.
-   */
-  @NotNull
-  public Collection<String> blacklistedAddresses() {
-    checkAvailability();
-    return this.epicGuard.storageManager().viewAddresses(AddressMeta::blacklisted);
-  }
-
-  /**
    * @return The platform name and version EpicGuard is currently running on.
    */
   @NotNull

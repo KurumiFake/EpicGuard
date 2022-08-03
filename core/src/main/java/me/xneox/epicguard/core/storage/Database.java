@@ -55,7 +55,6 @@ public class Database {
     try (var connection = this.source.getConnection(); var statement = connection.prepareStatement(
         "CREATE TABLE IF NOT EXISTS epicguard_addresses("
         + "`address` VARCHAR(255) NOT NULL PRIMARY KEY, "
-        + "`blacklisted` BOOLEAN NOT NULL, "
         + "`whitelisted` BOOLEAN NOT NULL, "
         + "`nicknames` TEXT NOT NULL"
         + ")")) {
@@ -67,7 +66,6 @@ public class Database {
 
       while (rs.next()) {
         var meta = new AddressMeta(
-            rs.getBoolean("blacklisted"),
             rs.getBoolean("whitelisted"),
             new ArrayList<>(Arrays.asList(rs.getString("nicknames").split(","))));
 
@@ -83,11 +81,10 @@ public class Database {
 
       try (var connection = this.source.getConnection(); var statement = connection.prepareStatement(
           "REPLACE INTO"
-          + " epicguard_addresses(address, blacklisted, whitelisted, nicknames)"
+          + " epicguard_addresses(address, whitelisted, nicknames)"
           + " VALUES(?, ?, ?, ?)")) {
 
         statement.setString(1, entry.getKey());
-        statement.setBoolean(2, meta.blacklisted());
         statement.setBoolean(3, meta.whitelisted());
         statement.setString(4, String.join(",", meta.nicknames()));
 

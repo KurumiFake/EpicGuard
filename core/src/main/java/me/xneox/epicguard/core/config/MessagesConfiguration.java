@@ -67,7 +67,6 @@ public class MessagesConfiguration {
             "",
             " &8▸ &7Under attack: {ATTACK}",
             " &8▸ &7Connections: &e{CPS}/s",
-            " &8▸ &7Blacklist: &e{BLACKLISTED-IPS} &7IPs",
             " &8▸ &7Whitelist: &e{WHITELISTED-IPS} &7IPs",
             "",
             " &8/&fguard status &8- &7Toggle attack status on actionbar.",
@@ -90,7 +89,6 @@ public class MessagesConfiguration {
             "",
             " &eOther Data:",
             "  &8▸ &7Whitelisted: {WHITELISTED}",
-            "  &8▸ &7Blacklisted: {BLACKLISTED}",
             "");
 
     public String prefix() {
@@ -132,10 +130,6 @@ public class MessagesConfiguration {
         "&8» &7You have been kicked by &bAntiBot Protection&7:",
         "&8» &cYour country/city is not allowed on this server.");
 
-    private List<String> blacklisted = Arrays.asList(
-        "&8» &7You have been kicked by &bAntiBot Protection&7:",
-        "&8» &cYou have been blacklisted on this server.");
-
     private List<String> proxy = Arrays.asList(
         "&8» &7You have been kicked by &bAntiBot Protection&7:",
         "&8» &cYou are using VPN or Proxy.");
@@ -166,10 +160,6 @@ public class MessagesConfiguration {
 
     public List<String> geographical() {
       return this.geographical;
-    }
-
-    public List<String> blacklisted() {
-      return this.blacklisted;
     }
 
     public List<String> proxy() {

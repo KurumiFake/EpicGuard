@@ -25,21 +25,11 @@ import org.jetbrains.annotations.NotNull;
  */
 public class AddressMeta {
   private final List<String> nicknames;
-  private boolean blacklisted;
   private boolean whitelisted;
 
-  public AddressMeta(boolean blacklisted, boolean whitelisted, @NotNull List<String> nicknames) {
-    this.blacklisted = blacklisted;
+  public AddressMeta(boolean whitelisted, @NotNull List<String> nicknames) {
     this.whitelisted = whitelisted;
     this.nicknames = nicknames;
-  }
-
-  public boolean blacklisted() {
-    return this.blacklisted;
-  }
-
-  public void blacklisted(boolean blacklisted) {
-    this.blacklisted = blacklisted;
   }
 
   public boolean whitelisted() {
@@ -64,12 +54,12 @@ public class AddressMeta {
       return false;
     }
     AddressMeta that = (AddressMeta) o;
-    return blacklisted == that.blacklisted && whitelisted == that.whitelisted
+    return whitelisted == that.whitelisted
         && Objects.equals(nicknames, that.nicknames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nicknames, blacklisted, whitelisted);
+    return Objects.hash(nicknames, whitelisted);
   }
 }

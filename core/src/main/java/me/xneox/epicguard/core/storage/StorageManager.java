@@ -101,7 +101,7 @@ public class StorageManager {
 
   /**
    * A legacy method for viewing addresses that meet a specific condition. For example, this can
-   * return whitelisted or blacklisted addresses.
+   * return whitelisted addresses.
    *
    * Returned list is immutable, used only for statistics and command suggestions.
    */
